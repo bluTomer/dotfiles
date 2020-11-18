@@ -1,7 +1,6 @@
 " j/k will move virtual lines (lines that wrap)
-" Disabled for now as it slows scrolling
-" noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
-" noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
+noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
+noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
 
 " easier split nav
 nnoremap <C-J> <C-W><C-J>
