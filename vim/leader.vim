@@ -17,7 +17,7 @@ highlight default link WhichKeyGroup     Type
 highlight default link WhichKeyDesc      Function
 
 let g:which_key_map['/'] = [ ':call Comment()'                    , 'comment' ]
-let g:which_key_map['e'] = [ ':NERDTreeToggle %'                  , 'NERD']
+let g:which_key_map['e'] = [ ':NERDTreeToggle'                  , 'NERD']
 let g:which_key_map['h'] = [ '<C-W>s'                             , 'split below']
 let g:which_key_map['v'] = [ '<C-W>v'                             , 'split right']
 let g:which_key_map['x'] = [ '<C-W>q'                             , 'close split']
