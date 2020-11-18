@@ -2,8 +2,8 @@ set lazyredraw                          " improves performance
 set iskeyword+=-                      	" treat dash separated words as a word text object"
 set formatoptions-=cro                  " Stop newline continution of comments
 set hidden                              " Required to keep multiple buffers open multiple buffers
-set encoding=utf-8                      " The encoding displayed
-set fileencoding=utf-8                  " The encoding written to file
+set encoding=UTF-8                      " The encoding displayed
+set fileencoding=UTF-8                  " The encoding written to file
 set pumheight=10                        " Makes popup menu smaller
 set mouse=a                             " Enable your mouse
 set splitbelow                          " Horizontal splits will automatically be below

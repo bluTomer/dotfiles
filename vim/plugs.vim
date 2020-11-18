@@ -16,6 +16,7 @@ Plug 'airblade/vim-gitgutter' "__________________________________ visual git ind
 Plug 'ntpeters/vim-better-whitespace' "__________________________ mark trailing whitespace
 Plug 'mg979/vim-xtabline' "______________________________________ show buffers on top bar
 Plug 'RRethy/vim-illuminate' "___________________________________ highlight all word under cursor
+Plug 'ryanoasis/vim-devicons'
 
 "___ TOOLS: NAVIGATION
 Plug 'mhinz/vim-startify' "______________________________________ start screen

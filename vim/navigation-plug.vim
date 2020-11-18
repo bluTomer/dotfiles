@@ -2,6 +2,7 @@
 let NERDTreeQuitOnOpen = 1
 let NERDTreeMinimalUI = 1
 let NERDTreeIgnore = ['dist', 'node_modules', '.git', '__pycache__']
+let g:webdevicons_enable_nerdtree = 1
 
 " QUICKSCOPE
 let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
