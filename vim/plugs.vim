@@ -40,7 +40,6 @@ Plug 'HerringtonDarkholme/yats.vim' "____________________________ typescript syn
 
 "___ TEXT OBJECTS
 Plug 'vim-scripts/argtextobj.vim'
-Plug 'vim-scripts/ReplaceWithRegister'
 
 "___ TO TRY
 " Plug 'tpope/vim-eunuch' "________________________________________ shell commands
