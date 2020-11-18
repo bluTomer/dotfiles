@@ -28,6 +28,7 @@ set updatetime=300                      " Faster completion
 set timeoutlen=100                      " By default timeoutlen is 1000 ms
 set clipboard=unnamedplus               " Copy paste between vim and everything else
 set incsearch                           " Start searching as you type
+set conceallevel=0                      " Don't hide characters in md files
 " let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 " set mmp=1300
 " set autochdir                           " Your working directory will always be the same as your working directory
@@ -35,7 +36,6 @@ set incsearch                           " Start searching as you type
 " set ruler              			            " Show the cursor position all the time
 " set cmdheight=2                         " More space for displaying messages
 " set t_Co=256                            " Support 256 colors
-" set conceallevel=0                      " So that I can see `` in markdown files
 
 set autoread                            " autoload changed files
 au FocusGained,BufEnter * checktime
