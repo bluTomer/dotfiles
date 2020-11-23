@@ -11,12 +11,12 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'arcticicestudio/nord-vim' "________________________________ theme
 Plug 'lilydjwg/colorizer' "______________________________________ colorizer
 Plug 'vim-airline/vim-airline' "_________________________________ bottom status line
-Plug 'Yggdroot/indentLine' "_____________________________________ indentation markers
 Plug 'airblade/vim-gitgutter' "__________________________________ visual git indication on sign column
 Plug 'ntpeters/vim-better-whitespace' "__________________________ mark trailing whitespace
 Plug 'mg979/vim-xtabline' "______________________________________ show buffers on top bar
 Plug 'RRethy/vim-illuminate' "___________________________________ highlight all word under cursor
 Plug 'ryanoasis/vim-devicons'
+Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
 
 "___ TOOLS: NAVIGATION
 Plug 'mhinz/vim-startify' "______________________________________ start screen

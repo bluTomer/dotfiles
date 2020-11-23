@@ -64,3 +64,22 @@ let g:xtabline_settings.icons = {
 
 " ILLUMINATE
 let g:Illuminate_ftblacklist = ['nerdtree']
+
+" Semshi
+let g:semshi#excluded_hl_groups = ['unresolved']
+let g:semshi#error_sign = v:false
+
+function MyCustomHighlights()
+  hi semshiLocal           ctermfg=209 guifg=#D8DEE9
+  hi semshiGlobal          ctermfg=214 guifg=#88C0D0
+  hi semshiImported        ctermfg=214 guifg=#88C0D0 cterm=bold gui=bold
+  hi semshiParameter       ctermfg=75  guifg=#D8DEE9 cterm=italic gui=italic
+  hi semshiParameterUnused ctermfg=117 guifg=#87d7ff cterm=underline gui=underline
+  hi semshiFree            ctermfg=218 guifg=#ffafd7
+  hi semshiBuiltin         ctermfg=207 guifg=#B48EAD
+  hi semshiAttribute       ctermfg=49  guifg=#00ffaf
+  hi semshiSelf            ctermfg=249 guifg=#b2b2b2
+  hi semshiUnresolved      ctermfg=226 guifg=#ffff00 cterm=underline gui=underline
+  hi semshiSelected        ctermfg=231 guifg=#ffffff ctermbg=161 guibg=#d7005f0
+endfunction
+autocmd FileType python call MyCustomHighlights()
