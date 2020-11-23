@@ -12,9 +12,5 @@ sh setup.sh
 ## TODO
 * Test `setup.sh` and make sure it covers the install well
 * Remove `which-key` usage and transform to regular keymaps
-* Improve performance, current state of scrolling isn't smooth enough
-* Test out [YouCompleteMe](https://github.com/ycm-core/YouCompleteMe) as a replacement for COC
-* Go over `coc-settings.json` if we end up choosing it
 * `vim-surround` isn't working properly
 * Make FZF use a bottom panel instead of a floating one
-* Brighten the comments color in the nord theme
