@@ -41,3 +41,5 @@ prompt_context() {
 }
 
 PATH=$PATH:$HOME/.local/bin:$HOME/.poetry/bin
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
