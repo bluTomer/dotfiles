@@ -1,3 +1,4 @@
+set wildignore+=*.pyc,*.o,*.obj,*.svn,*.swp,*.class,*.hg,*.DS_Store,*.min.*
 set lazyredraw                          " improves performance
 set iskeyword+=-                      	" treat dash separated words as a word text object"
 set formatoptions-=cro                  " Stop newline continution of comments
@@ -26,6 +27,7 @@ set shortmess+=c                        " Don't pass messages to |ins-completion
 set signcolumn=yes                      " Always show the signcolumn, otherwise it would shift the text each time
 set clipboard=unnamedplus               " Copy paste between vim and everything else
 set incsearch                           " Start searching as you type
+set ignorecase                          " Ignore case in searches
 set conceallevel=0                      " Don't hide characters in md files
 " set updatetime=300                      " Faster completion
 " let $NVIM_TUI_ENABLE_TRUE_COLOR=1

@@ -3,6 +3,8 @@ let NERDTreeQuitOnOpen = 1
 let NERDTreeMinimalUI = 1
 let NERDTreeIgnore = ['dist', 'node_modules', '.git', '__pycache__']
 let g:webdevicons_enable_nerdtree = 1
+let NERDTreeRespectWildIgnore = 1
+let g:NERDTreeWinSize = 60
 
 " QUICKSCOPE
 let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']

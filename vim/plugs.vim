@@ -24,7 +24,6 @@ Plug 'scrooloose/nerdtree' "_____________________________________ nerdtree file 
 Plug 'Xuyuanp/nerdtree-git-plugin' "_____________________________ nerdtree git integration
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } "____________ fzf
 Plug 'junegunn/fzf.vim' "________________________________________ fzf
-Plug 'unblevable/quick-scope' "__________________________________ Text Navigation with f
 
 "___ TOOLS: AUTOMATION
 Plug 'tpope/vim-commentary' "____________________________________ comment code
@@ -36,7 +35,7 @@ Plug 'tpope/vim-surround' "______________________________________ easy surround
 "___ TOOLS: CODE
 Plug 'neoclide/coc.nvim', {'branch': 'release' } "_______________ auto completion
 Plug 'tpope/vim-fugitive' "______________________________________ run git commands with :Git
-Plug 'APZelos/blamer.nvim' "_____________________________________ show blame inline
+" Plug 'APZelos/blamer.nvim' "_____________________________________ show blame inline
 Plug 'HerringtonDarkholme/yats.vim' "____________________________ typescript syntax highlighting
 
 "___ TEXT OBJECTS
