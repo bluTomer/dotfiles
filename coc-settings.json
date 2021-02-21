@@ -1,29 +1,16 @@
 {
-  // suggestions
-  // "suggest.echodocSupport": true,
-  // TODO add more labels and give them cool glyphs
   "suggest.completionItemKindLabels": {
     "text": "t",
     "method": "m",
     "function": ""
   },
-
-  // diagnostics
   "diagnostic.errorSign": " ",
   "diagnostic.warningSign": " ",
   "diagnostic.infoSign": "",
   "diagnostic.hintSign": " ",
-  // "diagnostic.displayByAle": true,
-  // "diagnostic.virtualText": true, // this won't work with codelens when error on same line
-
-  // codelens TODO what does this get me?
-  // "codeLens.enable": true,
-
-  // list
+  "diagnostic.virtualText": true,
   "list.indicator": ">",
   "list.selectedSignText": " ",
-
-  // autoformat
   "coc.preferences.formatOnSaveFiletypes": [
     "css",
     "markdown",
@@ -35,25 +22,20 @@
     "python",
     "java"
   ],
-  "coc.preferences.hoverTarget": "float",
-
-  // python config
-  "python.linting.enabled": false,
+  "coc.preferences.rootPatterns": [
+    "setup.py",
+    "pyproject.toml",
+    ".git"
+  ],
+  "python.pythonPath": "~/.pyenv/shims/python",
+  "python.linting.enabled": true,
   "python.linting.pylintEnabled": false,
   "python.formatting.provider": "black",
-  // "python.formatting.blackPath": "~/.local/bin/black",
-  // "python.linting.pylintPath": "~/.miniconda/envs/neovim/bin/pylint",
-  // "python.condaPath": "~/.miniconda/bin/conda",
-  // "python.sortImports.path": "~/.miniconda/envs/neovim/bin/isort",
-  // "python.jediPath": "~/.miniconda/envs/neovim/lib/python3.8/site-packages",
-
-  // snippets
-  "snippets.ultisnips.directories": ["UltiSnips", "~/.config/nvim/snips"],
-  //"snippets.userSnippetsDirectory": "~/.config/nvim/snips",
-
-  //coc-emoji
-  "coc.source.emoji.filetypes": ["markdown"]
-
-  // TODO b:coc_suggest_disable=1 GOYO
-  // TODO add to paths.vim g:coc_node_path
+  "python.formatting.blackPath": "~/.local/bin/black",
+  "python.venvPath": "~/.pyenv/versions",
+  "snippets.ultisnips.directories": [
+    "UltiSnips",
+    "~/.config/nvim/snips"
+  ],
+  "snippets.userSnippetsDirectory": "~/.config/nvim/snips"
 }

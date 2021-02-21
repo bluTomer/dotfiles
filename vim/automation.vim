@@ -20,21 +20,13 @@ let g:coc_global_extensions = [
   \ 'coc-lists',
   \ 'coc-pairs',
   \ 'coc-yaml',
-  \ 'coc-python',
   \ 'coc-svg',
   \ 'coc-vimlsp',
   \ 'coc-xml',
   \ 'coc-yank',
   \ 'coc-json',
+  \ 'coc-pyright',
   \ ]
-  " \ 'coc-pyright',
-  " \ 'coc-tasks',
-  " \ 'coc-tsserver',
-  " \ 'coc-html',
-  " \ 'coc-css',
-  " \ 'coc-emoji',
-  " \ 'coc-cssmodules',
-  " \ 'coc-marketplace',
 
 " Use <cr> to confirm completion, `<C-g>u` means break undo chain at current
 " position. Coc only does snippet and additional edit on confirm.
