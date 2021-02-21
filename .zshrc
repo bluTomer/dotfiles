@@ -1,17 +1,17 @@
 export DEFAULT_USER=tomer
 
-CASH_PATH="$HOME/.dotfiles/.cache"
-if [ ! -d $CASH_PATH ]; then
+CACHE_PATH="$HOME/.dotfiles/.cache"
+if [ ! -d $CACHE_PATH ]; then
     echo "Creating .cache" >&2
-    mkdir $CASH_PATH
+    mkdir $CACHE_PATH
 fi
 
-if [ ! -f $CASH_PATH/antigen.zsh ]; then
+if [ ! -f $CACHE_PATH/antigen.zsh ]; then
     echo "Getting antigen" >&2
-    curl -L git.io/antigen > $CASH_PATH/antigen.zsh
+    curl -L git.io/antigen > $CACHE_PATH/antigen.zsh
 fi
 
-source $CASH_PATH/antigen.zsh
+source $CACHE_PATH/antigen.zsh
 
 antigen use oh-my-zsh
 antigen theme agnoster
@@ -43,3 +43,8 @@ prompt_context() {
 PATH=$PATH:$HOME/.local/bin:$HOME/.poetry/bin
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+export LDFLAGS="-L/usr/local/opt/openssl/lib"
+export CPPFLAGS="-I/usr/local/opt/openssl/include"
+
+source $HOME/.dotfiles/alias.local
