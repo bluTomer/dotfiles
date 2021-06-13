@@ -19,7 +19,7 @@
     "html",
     "yaml",
     "json",
-    "python",
+    //   "python",
     "java"
   ],
   "coc.preferences.rootPatterns": [
@@ -31,7 +31,7 @@
   "python.linting.enabled": true,
   "python.linting.pylintEnabled": false,
   "python.formatting.provider": "black",
-  "python.formatting.blackPath": "~/.local/bin/black",
+  //"python.formatting.blackPath": "~/.local/bin/black",
   "python.venvPath": "~/.pyenv/versions",
   "snippets.ultisnips.directories": [
     "UltiSnips",
