@@ -13,26 +13,27 @@ fi
 
 source $CACHE_PATH/antigen.zsh
 
-antigen use oh-my-zsh
+export ZSH="/Users/tomer_blushinsky/.oh-my-zsh"
+source $ZSH/oh-my-zsh.sh
 antigen theme agnoster
 
-antigen bundles <<EOBUNDLES
-  git
-  z
-  osx
-  zsh-users/zsh-syntax-highlighting
-  docker
-  command-not-found
-EOBUNDLES
+# antigen bundles <<EOBUNDLES
+#   git
+#   z
+#   osx
+#   zsh-users/zsh-syntax-highlighting
+#   docker
+#   command-not-found
+# EOBUNDLES
 
 antigen apply
 
 alias vim=nvim
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
+eval "$(pyenv init - --no-rehash)"
+eval "$(pyenv virtualenv-init - --no-rehash)"
 export NVM_DIR="$HOME/.nvm"
   [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
-  [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+#   [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 prompt_context() {
   if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
