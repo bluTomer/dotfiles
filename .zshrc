@@ -12,19 +12,20 @@ if [ ! -f $CACHE_PATH/antigen.zsh ]; then
 fi
 
 source $CACHE_PATH/antigen.zsh
-
+export ZSH_DISABLE_COMPFIX=true
 export ZSH="/Users/tomer_blushinsky/.oh-my-zsh"
 source $ZSH/oh-my-zsh.sh
 antigen theme agnoster
 
-# antigen bundles <<EOBUNDLES
-#   git
-#   z
+antigen bundles <<EOBUNDLES
+   git
+   z
 #   osx
-#   zsh-users/zsh-syntax-highlighting
+   zsh-users/zsh-syntax-highlighting
 #   docker
 #   command-not-found
-# EOBUNDLES
+  fzf
+EOBUNDLES
 
 antigen apply
 
