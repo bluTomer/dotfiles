@@ -61,6 +61,8 @@ return packer.startup(function(use)
   use "williamboman/nvim-lsp-installer" -- simple to use language server installer
   -- Telescope
   use "nvim-telescope/telescope.nvim"
+  -- Treesitter
+  use {"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"}
   -- Automatically set up your configuration after cloning packer.nvim
   if PACKER_BOOTSTRAP then
     require("packer").sync()
