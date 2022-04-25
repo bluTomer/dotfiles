@@ -11,6 +11,8 @@ telescope.setup {
     prompt_prefix = " ",
     selection_caret = " ",
     path_display = { "smart" },
+    -- path_display.shorten = en = 2 },
+    -- path_display.shorten = 2, -- { len = 2, exclude = {2, -2} },
 
     mappings = {
       i = {
@@ -42,6 +44,7 @@ telescope.setup {
         ["<M-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
         ["<C-l>"] = actions.complete_tag,
         ["<C-_>"] = actions.which_key, -- keys from pressing <C-/>
+        ["<esc>"] = actions.close,
       },
 
       n = {
@@ -87,6 +90,22 @@ telescope.setup {
     -- builtin picker
   },
   extensions = {
+    fzf = {
+      fuzzy = true,                    -- false will only do exact matching
+      override_generic_sorter = true,  -- override the generic sorter
+      override_file_sorter = true,     -- override the file sorter
+      case_mode = "smart_case",        -- or "ignore_case" or "respect_case"
+                                       -- the default case_mode is "smart_case"
+    }
+    -- fzf_writer = {
+    --         minimum_grep_characters = 2,
+    --         minimum_files_characters = 2,
+    --
+    --         -- Disabled by default.
+    --         -- Will probably slow down some aspects of the sorter, but can make color highlights.
+    --         -- I will work on this more later.
+    --         use_highlighter = true,
+    --     }
     -- Your extension configuration goes here:
     -- extension_name = {
     --   extension_config_key = value,
@@ -94,3 +113,5 @@ telescope.setup {
     -- please take a look at the readme of the extension you want to configure
   },
 }
+
+telescope.load_extension('fzf')
