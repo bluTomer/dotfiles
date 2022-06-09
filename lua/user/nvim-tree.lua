@@ -21,7 +21,6 @@ vim.g.nvim_tree_icons = {
   },
 }
 -- Legacy option because this isn't supported on setup yet
-vim.g.nvim_tree_quit_on_open = 1
 vim.g.nvim_tree_respect_buf_cwd = 1
 
 local status_ok, nvim_tree = pcall(require, "nvim-tree")
@@ -39,21 +38,34 @@ end
 local tree_cb = nvim_tree_config.nvim_tree_callback
 
 nvim_tree.setup {
-  disable_netrw = true,
-  hijack_netrw = true,
+  -- disable_netrw = true,
+  -- hijack_netrw = true,
   open_on_setup = false,
   ignore_ft_on_setup = {
     "startify",
     "dashboard",
     "alpha",
   },
-  auto_close = true,
   open_on_tab = false,
   hijack_cursor = false,
   update_cwd = true,
   update_to_buf_dir = {
     enable = true,
     auto_open = true,
+  },
+  renderer = {
+    indent_markers = {
+      enable = false,
+      icons = {
+        corner = "└ ",
+        edge = "│ ",
+        none = "  ",
+      },
+    },
+    icons = {
+      webdev_colors = true,
+      git_placement = "before",
+    },
   },
   diagnostics = {
     enable = false,
@@ -103,15 +115,22 @@ nvim_tree.setup {
     cmd = "trash",
     require_confirm = true,
   },
-  -- quit_on_open = 1, -- Not working, legacy option set above
-  git_hl = 1,
-  disable_window_picker = 0,
-  root_folder_modifier = ":t",
-  show_icons = {
-    git = 1,
-    folders = 1,
-    files = 1,
-    folder_arrows = 1,
-    tree_width = 30,
+  actions = {
+    open_file = {
+      quit_on_open = true,
+      window_picker = {
+        enable = false,
+      },
+    },
   },
+  -- quit_on_open = 1, -- Not working, legacy option set above
+  -- git_hl = 1,
+  -- root_folder_modifier = ":t",
+  -- show_icons = {
+  --   -- git = 1,
+  --   folders = 1,
+  --   files = 1,
+  --   folder_arrows = 1,
+  --   tree_width = 30,
+  -- },
 }

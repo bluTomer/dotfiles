@@ -48,10 +48,10 @@ return packer.startup(function(use)
   use "numToStr/Comment.nvim" -- Easily comment stuff
   use "kyazdani42/nvim-web-devicons"
   use "kyazdani42/nvim-tree.lua"
-  use "akinsho/bufferline.nvim"
+  use {"akinsho/bufferline.nvim", tag = 'v1.*'}
   use "moll/vim-bbye"
   use "nvim-lualine/lualine.nvim"
-  use "akinsho/toggleterm.nvim"
+  use {"akinsho/toggleterm.nvim", tag = 'v1.*'}
   use "ahmedkhalf/project.nvim"
   use "lewis6991/impatient.nvim"
   use "goolord/alpha-nvim"
@@ -91,6 +91,8 @@ return packer.startup(function(use)
 
   -- Git
   use "lewis6991/gitsigns.nvim"
+  use "tpope/vim-fugitive"
+  use "tpope/vim-rhubarb"
 
   -- Automatically set up your configuration after cloning packer.nvim
   if PACKER_BOOTSTRAP then

@@ -33,8 +33,8 @@ alias vim=nvim
 eval "$(pyenv init - --no-rehash)"
 eval "$(pyenv virtualenv-init - --no-rehash)"
 export NVM_DIR="$HOME/.nvm"
-  [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
-#   [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 prompt_context() {
   if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
@@ -42,7 +42,6 @@ prompt_context() {
   fi
 }
 
-PATH=$PATH:$HOME/.local/bin:$HOME/.poetry/bin
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -50,3 +49,5 @@ export LDFLAGS="-L/usr/local/opt/openssl/lib"
 export CPPFLAGS="-I/usr/local/opt/openssl/include"
 
 source $HOME/.dotfiles/alias.local
+PATH=/Users/tomer_blushinsky/.nvm/versions/node/v16.15.0/bin:$PATH
+PATH=$PATH:$HOME/.local/bin:$HOME/.poetry/bin
